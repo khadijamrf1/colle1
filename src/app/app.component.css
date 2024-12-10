@@ -1,0 +1,64 @@
+/* Style de la navbar principale */
+.navbar {
+    background-color: #007bff;
+    padding: 15px 0;
+  }
+  
+ 
+  .navbar .navbar-brand {
+    color: white !important;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Menu de navigation de la navbar */
+  .navbar-nav .nav-link {
+    color: white !important;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Effet au survol des liens de la navbar */
+  .navbar-nav .nav-link:hover {
+    color: #ffcc00 !important;
+  }
+  
+  /* Menu centré sous le header */
+  .navbar-links-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;  /* Espacement entre les liens */
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .navbar-link {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid #007bff;  /* Bordure autour du lien */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  }
+  
+  /* Effet au survol des liens du menu */
+  .navbar-link:hover {
+    background-color: #0056b3;
+    color: #ffcc00;
+    transform: scale(1.05);
+  }
+  
+  /* Mise en forme responsive */
+  @media (max-width: 768px) {
+    .navbar-links-container {
+      flex-direction: column; /* Aligner les liens verticalement sur les petits écrans */
+    }
+  
+    .navbar-link {
+      margin-bottom: 15px; /* Espacement entre les liens */
+    }
+  }
+  

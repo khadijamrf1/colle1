@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif; /* Application de la nouvelle police */
+  }
+  
+  .navbar {
+    background-color: #1e3a8a;
+    padding: 10px 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  #logo {
+    font-size: 24px;
+    text-shadow: 1px 1px 1px black;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+  
+  #logo img {
+    margin-right: 10px;
+    border-radius: 50%; /* Icône circulaire pour le logo */
+  }
+  
+  .navbar-nav {
+    text-align: center;
+  }
+  
+  .nav-item .nav-link {
+    color: white;
+    font-weight: 600; /* Texte plus épais */
+    margin-left: 20px;
+    transition: color 0.3s ease;
+    font-size: 18px;
+  }
+  
+  .nav-item .nav-link:hover {
+    color: #ffdd99;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .icons .icon-link {
+    font-size: 20px;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .icons .icon-link:hover {
+    color: #ffdd99;
+    transform: scale(1.2);
+  }
+  
+  /* Responsivité pour les petits écrans */
+  @media (max-width: 768px) {
+    .navbar-brand {
+      font-size: 20px;
+    }
+  
+    .icons {
+      gap: 10px;
+    }
+  
+    .nav-item .nav-link {
+      font-size: 16px;
+    }
+  }
+  
+  /* Responsivité pour les très petits écrans */
+  @media (max-width: 576px) {
+    #logo img {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .navbar {
+      padding: 5px 10px;
+    }
+  
+    .nav-item .nav-link {
+      font-size: 14px;
+    }
+  
+    .icons .icon-link {
+      font-size: 16px;
+    }
+  }
+  .motivational-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #0dbaf4;
+    font-weight: bold;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    animation: blink 1s infinite; /* Animation de clignotement */
+  }
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.2; /* Plus transparent */
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .motivational-message p {
+    margin: 0;
+    padding: 5px;
+    text-transform: uppercase;
+  }
+  

@@ -1,0 +1,148 @@
+/* Container principal du panier */
+.container {
+    margin-top: 30px;
+    position: relative;
+    background-image: url('https://www.codeur.com/blog/wp-content/uploads/2017/11/exemples-panier-ecommerce.jpg'); /* Remplacez par le lien de votre image */
+    background-size: cover; /* Couvre toute la section */
+    background-position: center; /* Centrer l'image */
+    padding: 50px 0; /* Espacement autour du contenu */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour un effet de profondeur */
+  }
+  
+  .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond sombre semi-transparent */
+    border-radius: 10px;
+    z-index: -1; /* Placer l'overlay derrière le contenu */
+  }
+  
+  /* Titre du panier */
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 170px;
+    font-weight: bold;
+  }
+  
+  /* Section avec les produits du panier */
+  .table-responsive {
+    margin-bottom: 40px;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+  /* Style des cellules du tableau */
+  .table th, .table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    color: #fff; /* Texte en blanc pour un meilleur contraste avec l'overlay */
+  }
+  
+  /* Couleur de fond des en-têtes */
+  .table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Lignes alternées du tableau */
+  .table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #e2e2e2;
+  }
+  
+  /* Bouton de suppression */
+  .btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+  }
+  
+  /* Section pour le calcul total du panier */
+  .total-section {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .total-section h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff; /* Texte blanc */
+    padding: 20px;
+    border: 3px solid #007bff;  /* Encadrer le prix total */
+    border-radius: 10px;
+    background-color: rgba(0, 123, 255, 0.7); /* Fond semi-transparent pour bien distinguer */
+    animation: blink 1s infinite; /* Animation de clignotement */
+  }
+  
+  /* Animation pour faire clignoter le prix total */
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Bouton "Passer à la caisse" */
+  .total-section button {
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .total-section button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Mise en forme responsive */
+  @media (max-width: 768px) {
+    .table {
+      font-size: 0.9rem;
+    }
+  
+    .total-section h3 {
+      font-size: 1.2rem;
+    }
+  
+    .total-section button {
+      padding: 10px 25px;
+    }
+  }
+
+  

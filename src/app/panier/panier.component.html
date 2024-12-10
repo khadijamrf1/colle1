@@ -1,0 +1,32 @@
+<div class="container mt-4">
+    <h2>Votre Panier</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Prix</th>
+            <th>Quantité</th>
+            <th>Total</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of cartItems">
+            <td>{{ item.name }}</td>
+            <td>{{ item.price }} MAD</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.price * item.quantity }} MAD</td>
+            <td>
+              <button class="btn btn-danger" (click)="removeFromCart(item.id)">Supprimer</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="total-section">
+      <h3>Total : {{ getTotalPrice() }} MAD</h3>
+      <button class="btn btn-primary">Passer à la caisse</button>
+    </div>
+  </div>
+  
